@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Longshot",
+  "short_name": "Longshot",
+  "version": "0.1.0",
+  "description": "Personal full-page screenshots. Local only: no network, no analytics.",
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_title": "Longshot: capture full page (Option+Shift+P)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "Capture full page"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; connect-src 'none'; form-action 'none'"
+  }
+}

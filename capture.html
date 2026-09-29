@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Longshot</title>
+  <link rel="stylesheet" href="capture.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="info">
+      <h1 id="title">Stitching…</h1>
+      <p id="sub" class="muted"></p>
+    </div>
+    <div class="actions">
+      <button id="copy" type="button" disabled>Copy</button>
+      <button id="download" type="button" class="primary" disabled>Download PNG</button>
+    </div>
+  </header>
+  <main>
+    <p id="status" class="muted">Loading tiles…</p>
+    <div id="preview"></div>
+  </main>
+  <script src="capture.js"></script>
+</body>
+</html>
